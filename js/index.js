@@ -8,18 +8,27 @@ var typed = new Typed("#typing", {
 });
 
 const hamburgerMenu = document.querySelector(".hamburger-menu");
+const hamburgerMenuActive = document.querySelector(".hamburger-clicked");
 const mobileMenu = document.querySelector(".mobile-menu");
 const frontPage = document.querySelector(".header");
 
 const toggleMenu = () => {
 	mobileMenu.classList.toggle("menu-active");
-	hamburgerMenu.classList.toggle("hamburger-clicked");
 };
 
 let flag = 0;
 
+const toggleMenufunc = () => {
+	flag = 0;
+	toggleMenu();
+};
+
 hamburgerMenu.addEventListener("click", () => {
 	flag = 1;
+	toggleMenu();
+});
+
+hamburgerMenuActive.addEventListener("click", () => {
 	toggleMenu();
 });
 
