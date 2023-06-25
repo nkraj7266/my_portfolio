@@ -29,6 +29,7 @@ hamburgerMenu.addEventListener("click", () => {
 });
 
 hamburgerMenuActive.addEventListener("click", () => {
+	flag = 0;
 	toggleMenu();
 });
 
