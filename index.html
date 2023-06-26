@@ -623,9 +623,9 @@
 			<h2>CONTACT ME</h2>
 			<h4>Let's Connect and Create Magic!</h4>
 			<p>
-				I'm excited to hear from you! Whether you have a project
-				idea,<br />collaboration opportunity, or just want to say
-				hello,<br />feel free to reach out.
+				I'm Excited to Hear from You! Whether you have a Project Idea,
+				Collaboration Opportunity, or just want to say Hello, Feel Free
+				to Reach out.
 			</p>
 			<div class="contact-me-wrap">
 				<div data-aos="fade-up" class="contact-container">
@@ -691,7 +691,10 @@
 				</div>
 
 				<div data-aos="fade-up" class="form-container">
-					<form class="form">
+					<form
+						onsubmit="sendEmail(); reset(); return false;"
+						class="form"
+					>
 						<div class="form-group">
 							<label for="name">Name:</label>
 							<input type="text" id="name" name="name" required />
@@ -732,13 +735,22 @@
 			<p>&copy; 2023 Nitin Rajvanshi | All Rights Reserved</p>
 			<p class="designed-by">Designed By <span>Nitin Rajvanshi</span></p>
 		</footer>
-
+		<!-- Scripts -->
 		<script
 			src="https://kit.fontawesome.com/edbdfc2854.js"
 			crossorigin="anonymous"
 		></script>
 		<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init("F1yekWdHJoEuCrciC");
+			})();
+		</script>
 		<script src="js/index.js"></script>
 	</body>
 </html>
